@@ -1,0 +1,9 @@
+updater <- Updater('6272156503:AAEu0xbP838sRG8BfHzWuusmcmV-xJfaR8c')
+say_hello <- function(bot, update) {
+user_name <- update$effective_user()$first_name
+bot$sendMessage(update$from_chat_id(),
+                  text = paste0("Здравствуйте, ", user_name, "!"),
+                  parse_mode = "Markdown")
+                  }
+
+                  
